@@ -5,7 +5,6 @@
 #define OPTO_PIN D8
 #define PUSH_BUTTON D3
 
-
 void LaunchBall() {
 
   digitalWrite(RELAY_PIN, HIGH);
