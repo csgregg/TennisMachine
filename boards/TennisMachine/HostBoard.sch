@@ -473,7 +473,7 @@ Mating cable assembly: Sparkfun &lt;a href="http://www.sparkfun.com/products/991
 </classes>
 <parts>
 <part name="U$1" library="diy-modules" deviceset="WEMOS-D1-MINI" device=""/>
-<part name="U$2" library="SRG" deviceset="JST-PH_2-PIN_HEADER" device=""/>
+<part name="P1" library="SRG" deviceset="JST-PH_2-PIN_HEADER" device="" value="5v"/>
 </parts>
 <sheets>
 <sheet>
@@ -484,14 +484,32 @@ Mating cable assembly: Sparkfun &lt;a href="http://www.sparkfun.com/products/991
 <attribute name="NAME" x="66.04" y="109.22" size="1.778" layer="95"/>
 <attribute name="VALUE" x="66.04" y="106.68" size="1.778" layer="96"/>
 </instance>
-<instance part="U$2" gate="G$1" x="12.7" y="147.32" smashed="yes" rot="R180">
-<attribute name="NAME" x="17.78" y="141.478" size="1.27" layer="95" font="vector" rot="R180"/>
-<attribute name="VALUE" x="17.78" y="151.638" size="1.27" layer="96" font="vector" rot="R180"/>
+<instance part="P1" gate="G$1" x="96.52" y="121.92" smashed="yes" rot="R180">
+<attribute name="NAME" x="101.6" y="116.078" size="1.27" layer="95" font="vector" rot="R180"/>
+<attribute name="VALUE" x="101.6" y="126.238" size="1.27" layer="96" font="vector" rot="R180"/>
 </instance>
 </instances>
 <busses>
 </busses>
 <nets>
+<net name="N$1" class="0">
+<segment>
+<pinref part="P1" gate="G$1" pin="1"/>
+<wire x1="104.14" y1="119.38" x2="111.76" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="GND"/>
+<wire x1="111.76" y1="119.38" x2="111.76" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="78.74" x2="96.52" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="P1" gate="G$1" pin="2"/>
+<wire x1="104.14" y1="121.92" x2="114.3" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="121.92" x2="114.3" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="5V"/>
+<wire x1="114.3" y1="76.2" x2="96.52" y2="76.2" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
